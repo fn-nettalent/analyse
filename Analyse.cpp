@@ -86,7 +86,7 @@ int cAnalyse::analyse (const char * input, const char * output)
     }
     while (inFile.getline(buffer , bufferSize, '\r'))    //!inFile.eof())
     {
-        int value;
+        long value;
         int r = stringToNumber(buffer,&value);
         if (r == 0)     // valid number
         {
@@ -110,7 +110,7 @@ int cAnalyse::analyse (const char * input, const char * output)
 
 // string to number conversion function
 // check if the string has proper decimal number
-int cAnalyse::stringToNumber (char *pNumber,int *returnValue)
+int cAnalyse::stringToNumber (char *pNumber,long *returnValue)
 {
     char *p;
     long value = std::strtol(pNumber, &p, 10);

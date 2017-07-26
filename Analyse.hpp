@@ -26,7 +26,7 @@ private:
     float average;
     char *buffer;
     const int bufferSize = 256;                 // buffer size for memory allocations
-    int stringToNumber (char *,int *);          // atoa implementation with error control
+    int stringToNumber (char *,long *);          // atoa implementation with error control
     
 public:
     cAnalyse();       // Constructor
