@@ -9,6 +9,32 @@
 #ifndef Analyse_hpp
 #define Analyse_hpp
 
-#include <stdio.h>
+#pragma once
 
+#include <stdio.h>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+
+
+class cAnalyse {
+private:
+    fstream inFile,outFile;
+    int count, sum;
+    float average;
+    char *buffer;
+    const int bufferSize = 256;                 // buffer size for memory allocations
+    int stringToNumber (char *,int *);          // atoa implementation with error control
+    
+public:
+    cAnalyse();       // Constructor
+    ~cAnalyse();      // Destructor
+    
+// Analyse function definition
+// input : input file path
+// output : output file path
+    int analyse (const char * input, const char * output);
+};
 #endif /* Analyse_hpp */

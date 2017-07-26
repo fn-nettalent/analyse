@@ -11,4 +11,15 @@
 
 #include <stdio.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+    void * analyseConstructor();                            // C reference function for class constrcustor
+    void analyseDestructor(void *thisClass);                // C reference function for class destrcustor
+    int analyse (const char * input, const char * output);   // C reference function for analyse function
+    
+#ifdef __cplusplus
+}
+#endif
+
 #endif /* test_h */
