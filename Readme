@@ -3,6 +3,6 @@ Building instruction for Analyse test module
 - Download ZIP file to local folder
 - Open Xcode project file with Xcode
 - Change input and output paths in the test.c
-- Or move downloaded folder to Desktop an rename it as Analyse to use original paths
+- Or move downloaded folder to /Users/ca/Desktop an rename it as Analyse to use original paths
 - Sample input file is provided in the repository - analyse.txt
 - Build and run from Xcode
