@@ -7,7 +7,11 @@
 //
 // Analyse class implementation
 // Also includes C reference functions implementations
-//
+// Class reads numbers from input file and write results to the output file
+// Output file contains three line;
+//      count of the numbers
+//      sum of the numbers
+//      avearege of the numbers
 
 #include "test.h"
 #include "Analyse.hpp"
@@ -65,12 +69,15 @@ cAnalyse::~cAnalyse()
 int cAnalyse::analyse (const char * input, const char * output)
 {
 //    cout << "initial values:" << sum  << "," << count << ","<< average << "\n";
+    
+    // open input file
     inFile.open(input);
     if ( (inFile.rdstate() & std::ifstream::failbit ) != 0 )
     {
         std::cerr << "Error opening:" << input << "\n";
         return -1;
     }
+    // open output file
     outFile.open(output,ios::out);
     if ( (outFile.rdstate() & std::ifstream::failbit ) != 0 )
     {
