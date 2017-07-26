@@ -115,6 +115,11 @@ int cAnalyse::stringToNumber (char *pNumber,long *returnValue)
     char *p;
     long value = std::strtol(pNumber, &p, 10);
     
+    if (strlen(pNumber) > 19)
+    {
+        // Number of digits is higher than 64-bit max value
+        return -1;
+    }
     if (p == pNumber)
     {
         // Not a valid number

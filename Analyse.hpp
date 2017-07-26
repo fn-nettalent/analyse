@@ -22,7 +22,7 @@ using namespace std;
 class cAnalyse {
 private:
     fstream inFile,outFile;
-    int count, sum;
+    long count, sum;
     float average;
     char *buffer;
     const int bufferSize = 256;                 // buffer size for memory allocations
